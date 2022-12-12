@@ -4,11 +4,11 @@ using UnityEngine.SceneManagement;
 
 namespace Assets.Scripts
 {
-    class AnimationSceneLoader : MonoBehaviour
+    class AnimationSceneLoader : SceneLoader
     {
         [SerializeField] private Animator _animator;
 
-        public void LoadScene(Scenes scene)
+        override public void LoadScene(Scenes scene)
         {
             StartCoroutine(Load(scene));
         }
